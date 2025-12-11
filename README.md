@@ -4,7 +4,7 @@ This is a fork of [hhobin/dataiku_factory](https://github.com/hhobin/dataiku_fac
 
 --- 
 
-A comprehensive Model Context Protocol (MCP) tool suite for Dataiku DSS integration. This project provides Claude Code with direct access to Dataiku DSS for managing recipes, datasets, and scenarios.
+A comprehensive Model Context Protocol (MCP) tool suite for Dataiku DSS integration. This project provides AI IDE with direct access to Dataiku DSS for managing recipes, datasets, and scenarios.
 
 ## 🚀 Quick Start
 
@@ -49,16 +49,32 @@ DSS_INSECURE_TLS=true  # Only if using self-signed certificates
 python scripts/mcp_server.py --help
 ```
 
-### Claude Code Integration
+### Kiro IDE Integration
 
-Register the MCP server with Claude Code:
+Register the MCP server:
 
-```bash
-claude mcp add dataiku-factory \
-    -e DSS_HOST=https://your-dss-instance.com:10000 \
-    -e DSS_API_KEY=your-api-key-here \
-    -e DSS_INSECURE_TLS=true \
-    -- python scripts/mcp_server.py
+```
+    "dataiku-factory": {
+      "command": ".venv\\Scripts\\python.exe",
+      "args": [
+        "scripts\\mcp_server.py"
+      ],
+      "env": {
+        "DSS_HOST": "https://you_dss_host",
+        "DSS_API_KEY": "you_dss_key",
+        "DSS_INSECURE_TLS": "false"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "get_project_flow",
+        "search_project_objects",
+        "get_dataset_sample",
+        "get_dataset_schema",
+        "get_scenario_logs",
+        "get_recent_runs",
+        "get_recipe_code"
+      ]
+    }
 ```
 
 ## 📚 MCP Tool Catalog
