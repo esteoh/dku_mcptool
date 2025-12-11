@@ -1,6 +1,6 @@
 # Dataiku Factory - MCP Tool Suite
 
-This is a fork of hhobin/dataiku_factory in which an attemp to adapt it to the Kiro AI IDE.
+This is a fork of [hhobin/dataiku_factory](https://github.com/hhobin/dataiku_factory) in which an attemp to adapt it to the Kiro AI IDE.
 
 --- 
 
