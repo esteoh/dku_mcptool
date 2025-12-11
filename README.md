@@ -1,5 +1,9 @@
 # Dataiku Factory - MCP Tool Suite
 
+This is a fork of hhobin/dataiku_factory in which an attemp to adapt it to the Kiro AI IDE.
+
+--- 
+
 A comprehensive Model Context Protocol (MCP) tool suite for Dataiku DSS integration. This project provides Claude Code with direct access to Dataiku DSS for managing recipes, datasets, and scenarios.
 
 ## 🚀 Quick Start
