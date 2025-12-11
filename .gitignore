@@ -143,3 +143,6 @@ Thumbs.db
 dataiku_mcp.log
 bandit-report.json
 *.tmp
+
+# Kiro specific
+.kiro/
